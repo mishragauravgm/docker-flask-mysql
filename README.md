@@ -25,11 +25,11 @@ This repository contains a simple Flask application that demonstrates how to con
 
 3. Access the application:
 
-    Open a web browser and go to [http://localhost:5000/login](http://localhost:5000/login) to test the login functionality.
+    Open a web browser and go to [http://localhost:5000/login](http://localhost:5005) to test the login functionality.
 
 ### Application Details
 
-- The Flask application (`app.py`) provides a simple login endpoint (`/login`) that checks credentials from a MySQL database.
+- The Flask application (`app.py`) provides information from a MySQL database.
 - The MySQL database is initialized with a sample user table (`users`) containing one user for testing.
 
 ### Project Structure
