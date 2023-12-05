@@ -13,8 +13,8 @@ This repository contains a simple Flask application that demonstrates how to con
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/mishragauravgm/flask-mysql-app.git
-    cd flask-mysql-app
+    git clone https://github.com/mishragauravgm/docker-flask-mysql.git
+    cd docker-flask-mysql
     ```
 
 2. Run the Docker containers:
