@@ -25,7 +25,7 @@ This repository contains a simple Flask application that demonstrates how to con
 
 3. Access the application:
 
-    Open a web browser and go to [http://localhost:5000/login](http://localhost:5005) to test the login functionality.
+    Open a web browser and go to [http://localhost:5005/](http://localhost:5005) to test the login functionality.
 
 ### Application Details
 
