@@ -1,5 +1,20 @@
 version: "3"
 services:
+  db:
+    container_name: db
+    image: mysql:latest
+    #platform: linux/x86_64
+    ports:
+      - "3305:3305"
+    restart: always
+    environment:
+      #MYSQL_USER: "root"
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "users"
+    volumes:
+      - ./db/ctp_users.sql:/docker-entrypoint-initdb.d/ctp_users.sql
+      - ./data:/var/lib/mysql
+
   app:
     build: ./app
     links:
@@ -9,18 +24,3 @@ services:
     depends_on:
       - db
     restart: always
-
-  db:
-    container_name: db
-    image: mysql:latest
-    #platform: linux/x86_64
-    ports:
-      - "3305:3305"
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: users
-    volumes:
-      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
-      - ./data:/var/lib/mysql
-  

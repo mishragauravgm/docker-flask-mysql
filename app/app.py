@@ -7,15 +7,15 @@ app = Flask(__name__)
 
 def user_data():
     config = {
-        'user': 'root',
+        #'user': 'root',
         'password': 'root',
         'host': 'db',
-        'port': '3305',
+        'port': '3306',
         'database': 'users'
     }
-    connection = mysql.connector.connect(**config)
+    connection = mysql.connector.connect(**config) #connect to sql database
     cursor = connection.cursor(dictionary=True)
-    cursor.execute('SELECT user_name, user_email FROM user_data')
+    cursor.execute('SELECT user_name, user_email FROM user_data') #fetch the entries
     results = cursor.fetchall()
     cursor.close()
     connection.close()
@@ -28,4 +28,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5005)
+    app.run(debug=True, host='0.0.0.0', port=5005)
